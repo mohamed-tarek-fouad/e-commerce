@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      DATABASE_URL: mongodb+srv://mdmedoo:1468957542@supermarket.guhwicv.mongodb.net/commerce
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - '3000:3000'
